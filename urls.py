@@ -1,4 +1,6 @@
 from django.conf.urls.defaults import patterns, include, url
+from shdnbi.views import home 
+import os 
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -14,4 +16,8 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+    (r'^static_media/(?P<path>.*)$', 'django.views.static.serve', 
+    { 'document_root': os.path.join(os.path.dirname(__file__), 'static').replace('\\','/') }), 
+    (r'^$', home),
+    (r'', include('django.contrib.flatpages.urls')), 
 )
