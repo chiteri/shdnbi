@@ -19,5 +19,6 @@ urlpatterns = patterns('',
     (r'^static_media/(?P<path>.*)$', 'django.views.static.serve', 
     { 'document_root': os.path.join(os.path.dirname(__file__), 'static').replace('\\','/') }), 
     (r'^$', home),
+    (r'^post/', include('shdnbi.post.urls')), 
     (r'', include('django.contrib.flatpages.urls')), 
 )

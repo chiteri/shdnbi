@@ -34,6 +34,10 @@ TIME_ZONE = 'Africa/Nairobi'
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en-us'
 
+TEMPLATE_CONTEXT_PROCESSORS = ( 
+'django.contrib.auth.context_processors.auth', 
+'shdnbi.context_processors.custom_proc', )
+
 SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
@@ -122,6 +126,8 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     'django.contrib.flatpages', 
+    'tagging', 
+    'shdnbi.post', 
 )
 
 # A sample logging configuration. The only tangible logging
