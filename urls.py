@@ -20,5 +20,6 @@ urlpatterns = patterns('',
     { 'document_root': os.path.join(os.path.dirname(__file__), 'static').replace('\\','/') }), 
     (r'^$', home),
     (r'^post/', include('shdnbi.post.urls')), 
+    (r'^comments/', include('django.contrib.comments.urls')), 
     (r'', include('django.contrib.flatpages.urls')), 
 )

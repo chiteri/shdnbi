@@ -128,6 +128,9 @@ INSTALLED_APPS = (
     'django.contrib.flatpages', 
     'tagging', 
     'shdnbi.post', 
+    'django.contrib.comments', 
+    'django.contrib.markup', 
+    # 'django.contrib.markdown', 
 )
 
 # A sample logging configuration. The only tangible logging
