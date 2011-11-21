@@ -1,0 +1,44 @@
+{% extends "base.html" %} 
+
+{% block title %} {{ object.title }} {% endblock %}
+   
+{% block content %} 
+		<div id="{{ object.id }}" class="post-130 post type-post hentry category-2011">
+			<h2 class="entry-title"><a href="{{ object.get_absolute_url }}" title="Permalink to {{ object.title }}" rel="bookmark">{{ object.title }}</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="{{ object.get_absolute_url }}" title="{{ object.pub_date|date:"Y" }}" rel="bookmark">
+				<span class="entry-date">{{ object.pub_date|date:"F j, Y" }}</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="/" title="View all posts by {{object.author}}">{{object.author}}</a></span></div><!-- .entry-meta -->
+				<div class="entry-content">
+				    {{ object.body_html|safe }}
+				</div><!-- .entry-content -->
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="{{ object.get_absolute_url }}" title="View all posts in 2011" rel="category tag">
+						 </a> </span>
+					<span class="meta-sep">|</span>
+							
+												<span class="comments-link"><a href="{{ object.get_absolute_url }}#respond" title="{{ object.title }}">Leave a comment</a></span>
+							</div><!-- .entry-utility -->
+		</div><!-- #post-## -->
+		
+		<div id="comments">
+
+					{% if object.enable_comments %}
+					<div id="respond">
+					{% load comments %}
+					{% load markup %}
+					{% get_comment_list for object as comment_list %}
+					
+					{% for comment in comment_list %} 
+					<p> <a href="{{comment.url}}">{{ comment.name }}</a> says: <br /> 
+					On {{comment.submit_date|date:"F j, Y"}}  </p>
+					<br /> {{ comment.comment|markdown}} <br /> <br />
+					{% endfor %}
+					<h3> Post a comment </h3>
+					{% render_comment_form for object %}
+					</div><!-- #respond -->
+						
+		</div><!-- #comments -->
+					{% endif %}
+{% endblock %}

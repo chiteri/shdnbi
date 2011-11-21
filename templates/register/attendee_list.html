@@ -1,0 +1,26 @@
+{% extends "base.html" %} 
+
+{% block title %} All Science Hack day Nairobi attendees {% endblock %}
+   
+{% block content %} 	
+	{% if object_list %}
+    
+    <ul> 
+	    {% for attendee in object_list %}
+		    <li> <strong> Full Names: </strong>{{ attendee.first_names }}, {{ attendee.last_name }} </li>
+			<p> <strong> Organization: </strong> {{ attendee.company_organization }} <br /> 
+			<strong> Short Bio: </strong> {{ attendee.short_bio }} </p> <hr/>
+		{% endfor %}
+	</ul>
+	{% else %} 
+		<p> There are no persons who have registered for the event. </p> 
+	{% endif %}
+	
+	<p> {{ page_obj }}
+		{% if page_obj.has_previous %}
+			<a href="?page={{ page_obj.previous_page_number }}">Previous page</a>
+		{% endif %}
+		{% if page_obj.has_next %}
+			<a href="?page={{ page_obj.next_page_number }}">Next page</a>
+		{% endif %}</p>
+{% endblock %}

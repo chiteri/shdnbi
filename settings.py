@@ -130,7 +130,7 @@ INSTALLED_APPS = (
     'shdnbi.post', 
     'django.contrib.comments', 
     'django.contrib.markup', 
-    # 'django.contrib.markdown', 
+    'shdnbi.register',
 )
 
 # A sample logging configuration. The only tangible logging
