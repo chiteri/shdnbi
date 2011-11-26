@@ -14,8 +14,29 @@
 				</div><!-- .entry-content -->
 			<div class="entry-utility">
 									<span class="cat-links">
-						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="{{ object.get_absolute_url }}" title="View all posts in 2011" rel="category tag">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> 
+						<!-- Display the categories the entry is posted under --> 
+						{% for category in object.categories.all %}
+						<a href="{{ category.get_absolute_url }}" title="View all posts in 2011" rel="category tag">{{ category.title }}</a>
+						{% if forloop.last %}{% else %}
+						{% ifequal forloop.revcounter0 1 %}and {% else %}, {% endifequal %}
+						{% endif %}
+						{% endfor %}
 						 </a> </span>
+						 
+						 {% if object.tags %}
+						 <span class="meta-sep">|</span>
+
+						<span class="tag-links">
+						<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> 
+						 {% for tag in object.tags %}
+						<a href="{{ tag.get_absolute_url }}" rel="tag">{{ tag }}</a>
+							{% if forloop.last %}{% else %}
+							{% ifequal forloop.revcounter0 1 %}and {% else %}, {% endifequal %}
+							{% endif %}						 
+						{% endfor %}						 
+						</span> 
+						{% endif %}
 					<span class="meta-sep">|</span>
 							
 												<span class="comments-link"><a href="{{ object.get_absolute_url }}#respond" title="{{ object.title }}">Leave a comment</a></span>

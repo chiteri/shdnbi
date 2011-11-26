@@ -12,11 +12,7 @@ def registration(request):
         if form.is_valid():
             cd = form.cleaned_data 
             participant = Attendee (first_names=cd['first_names'], last_name=cd['last_name'], e_mail=cd['e_mail'], company_organization=cd['company_organization'], short_bio=cd['short_bio'] )
-            participant.save()
-            #    cd['subject'],
-            #    cd['message'],
-            #    cd.get('e_mail', 'martin.chiteri@gmail.com'),
-            #   ['chiteri@geek.co.ke'], fail_silently=False)
+            participant.save() 
             return HttpResponseRedirect('/register/thanks/')
     else: 
         form = RegistrationForm()
