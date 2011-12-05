@@ -1,0 +1,31 @@
+{% extends "base.html" %} 
+
+{% block title %} All Science Hack day Nairobi attendees {% endblock %}
+   
+{% block content %} 
+
+Please visit our <a href="http://sciencehackdaynairobi.eventbrite.com/"> Event Brite page </a> 	to register <br /> <br /> 
+<hr />
+
+<h3> <u> Attendee List </u> </h3>
+	{% if participants %}
+    
+    <ul> 
+	    {% for participant in participants %}
+		    <li> <strong> Full Names: </strong>{{ participant.attendee.first_name }} {{ participant.attendee.last_name }} </li>
+			<p> <strong> Organization: </strong> {{ participant.attendee.company }} <br /> 
+			<strong> Short Bio: </strong> {{ participant.attendee.answers.0.answer.answer_text }} </p> <hr/>
+		{% endfor %}
+	</ul>
+	{% else %} 
+		<p> There are no persons who have registered for the event. </p> 
+	{% endif %}
+	
+	<p> {{ page_obj }}
+		{% if page_obj.has_previous %}
+			<a href="?page={{ page_obj.previous_page_number }}">Previous page</a>
+		{% endif %}
+		{% if page_obj.has_next %}
+			<a href="?page={{ page_obj.next_page_number }}">Next page</a>
+		{% endif %}</p>
+{% endblock %}

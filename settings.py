@@ -1,11 +1,11 @@
 import os 
 # Django settings for shdnbi project.
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+     ('Martin Akolo', 'martin.chiteri@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -161,3 +161,4 @@ APP_KEY = 'P477AH3GW4CUVAUS25'
 USER_KEY = '131770253021104887286'
 EVENT_ID = '2471841344'
 URL = 'http://www.eventbrite.com/json/event_list_attendees'
+
