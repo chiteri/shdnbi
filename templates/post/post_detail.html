@@ -3,7 +3,7 @@
 {% block title %} {{ object.title }} {% endblock %}
    
 {% block content %} 
-		<div id="{{ object.id }}" class="post-130 post type-post hentry category-2011">
+		<div id="{{ object.id }}" class="post{{ object.id }} post type-post hentry category-{{ object.pub_date|date:"Y" }}">
 			<h2 class="entry-title"><a href="{{ object.get_absolute_url }}" title="Permalink to {{ object.title }}" rel="bookmark">{{ object.title }}</a></h2>
 
 			<div class="entry-meta">

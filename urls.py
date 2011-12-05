@@ -1,5 +1,5 @@
 from django.conf.urls.defaults import patterns, include, url
-from shdnbi.views import home 
+from shdnbi.views import home, follow 
 import os 
 
 # Uncomment the next two lines to enable the admin:
@@ -19,6 +19,7 @@ urlpatterns = patterns('',
     (r'^static_media/(?P<path>.*)$', 'django.views.static.serve', 
     { 'document_root': os.path.join(os.path.dirname(__file__), 'static').replace('\\','/') }), 
     (r'^$', home),
+    (r'^follow$', follow), 
     (r'^post/', include('shdnbi.post.urls')), 
     (r'^register/', include('shdnbi.register.urls')), 
     (r'^comments/', include('django.contrib.comments.urls')), 
