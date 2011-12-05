@@ -65,7 +65,7 @@ STATIC_ROOT = ''
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = '/static/'
+STATIC_URL = '/media/'
 
 # URL prefix for admin static files -- CSS, JavaScript and images.
 # Make sure to use a trailing slash.
@@ -155,3 +155,9 @@ LOGGING = {
         },
     }
 }
+
+# Extra data for the Event brite service 
+APP_KEY = 'P477AH3GW4CUVAUS25'
+USER_KEY = '131770253021104887286'
+EVENT_ID = '2471841344'
+URL = 'http://www.eventbrite.com/json/event_list_attendees'
