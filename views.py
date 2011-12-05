@@ -7,3 +7,5 @@ def home(request):
     # return direct_to_template(request, 'base.html', context_instance=RequestContext(request, processors = [custom_proc]))
     return direct_to_template(request, 'base.html', {'featured_posts': Post.objects.filter(featured=True) } ) 
 	
+def follow(request): 
+    return direct_to_template(request, 'follow_button.html')

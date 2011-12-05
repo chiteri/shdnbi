@@ -2,6 +2,7 @@
 <!-- saved from url=(0029)http://sf.sciencehackday.com/ -->
 <html dir="ltr" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="UTF-8">
+<meta name="author" content="Martin Akolo Chiteri - www.geek.co.ke" />
 <title> Science Hack Day Nairobi | {% block title %} Get excited and make things …with science! {% endblock %} </title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <!-- Framework CSS -->
@@ -60,7 +61,7 @@ body { background-image: url('/static_media/images/tarantula.jpg'); background-r
 			{% block content %}
 			{% if featured_posts %}
 				{% for item in featured_posts %}
-			<div id="{{ item.id }}" class="post-130 post type-post hentry category-2011">
+			<div id="{{ item.id }}" class="post-{{ item.id }} post type-post hentry category-{{ item.pub_date|date:"Y" }}">
 			<h2 class="entry-title"><a href="{{ item.get_absolute_url }}" title="Permalink to {{ item.title }}" rel="bookmark">{{ item.title }}</a></h2>
 
 			<div class="entry-meta">
@@ -117,7 +118,7 @@ body { background-image: url('/static_media/images/tarantula.jpg'); background-r
 			<ul class="xoxo">
 
 <li id="text-3" class="widget-container widget_text"><h3 class="widget-title">Contact us</h3>			<div class="textwidget"><p>Have questions or want to chat more about Science Hack Day Nairobi? Email <a href="mailto:ariel@sciencehackday.org">mmwanga@kennesaw.edu</a></p>
-<p><iframe src="/templates/follow_button.htm" allowtransparency="true" frameborder="0" scrolling="no" class="twitter-follow-button" style="width: 300px; height: 20px; " title=""></iframe><br>
+<p><iframe src="/follow/" allowtransparency="true" frameborder="0" scrolling="no" class="twitter-follow-button" style="width: 300px; height: 20px; " title=""></iframe><br>
 <script src="/static_media/scripts/js/widgets.js" type="text/javascript"></script></p>
 </div>
 		</li><li id="text-5" class="widget-container widget_text"><h3 class="widget-title">Supported by</h3>			<div class="textwidget"><p><small>Nobelist</small><br>
@@ -138,6 +139,7 @@ body { background-image: url('/static_media/images/tarantula.jpg'); background-r
 		</li><li id="text-4" class="widget-container widget_text"><h3 class="widget-title">Organized by</h3>			
 		<div class="textwidget">
 		<a href="http://www.strathmore.edu/sevilla">Joseph Sevilla</a><br>
+		<a href="http://arielwaldman.com/">Ariel Waldman</a><br>
 		<a href="http://www.nerd.co.ke/">Morris Mwanga</a><br>
 		<a href="http://twitter.com/ckithika">Charles Kithika</a><br>
 		<a href="http://www.strathmore.edu/sylvia">Sharon Mutisya </a><br>
@@ -162,11 +164,14 @@ body { background-image: url('/static_media/images/tarantula.jpg'); background-r
 
 			<div id="site-info">
 				<a href="/" title="Science Hack Day Nairobi" rel="home">
-					Science Hack Day Nairobi				</a>
+					Science Hack Day Nairobi				</a> 
+				</a> ( Source Code <a href="https://github.com/chiteri/shdnbi/"> at GitHub ) </a>
+
 			</div><!-- #site-info -->
 
 			<div id="site-generator">
 								<a href="http://www.djangoproject.com/"><img src="http://media.djangoproject.com/img/badges/djangojoint107x25.gif" border="0" alt="A Django joint." title="A Django joint." /></a>
+								<a href="http://www.python.org"> <img src="http://www.python.org/community/logos/python-powered-h-50x65.png" alt="Python powered" title="Python Powered" /> </a>
 			</div><!-- #site-generator -->
 
 		</div><!-- #colophon -->
