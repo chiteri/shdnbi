@@ -4,10 +4,9 @@
 {% block extrahead %}{{ block.super }}
 {% url admin:jsi18n as jsi18nurl %}
 <script type="text/javascript" src="{{ jsi18nurl|default:"../../../jsi18n/" }}"></script>
-<link rel="stylesheet" type="text/css" media="all" href="/static_media/scripts/js/jquery-ui.custom/development-bundle/themes/base/jquery.ui.all.css" />
-<script language="JavaScript" src="/static_media/scripts/js/jquery-ui.custom/development-bundle/jquery-1.4.2.js"> </script>
-<script language="javaScript" src="/static_media/scripts/js/jquery-ui.custom/js/jquery-ui-1.8.4.custom.min.js"> </script>
-<script type="text/javascript" src="/static_media/scripts/js/tiny_mce/tiny_mce.js"> </script> 
+<script language="javaScript" src="/static/admin/js/jquery.js"> </script>
+<script language="javaScript" src="/static/admin/js/jquery.min.js"> </script>
+<script type="text/javascript" src="/static/scripts/js/tiny_mce/tiny_mce.js"> </script> 
 <script type="text/javascript"> 
 tinyMCE.init({
     mode: "textareas",
