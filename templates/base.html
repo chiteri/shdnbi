@@ -6,42 +6,35 @@
 <title> Science Hack Day Nairobi | {% block title %} Get excited and make things …with science! {% endblock %} </title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <!-- Framework CSS -->
-<link rel="stylesheet" href="/media/styles/blueprint/screen.css" type="text/css" media="screen, projection" />
-<link rel="stylesheet" href="/media/styles/blueprint/print.css" type="text/css" media="print" />
-<!--[if lt IE 8]><link rel="stylesheet" href="/media/styles/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]]-->
-<link rel="stylesheet" href="/media/styles/style.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" href="/static/styles/blueprint/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="/static/styles/blueprint/print.css" type="text/css" media="print" />
+<!--[if lt IE 8]><link rel="stylesheet" href="/static/styles/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]]-->
+<link rel="stylesheet" href="/static/styles/style.css" type="text/css" charset="utf-8" />
 <!-- End Framework CSS -->
-<link rel="alternate" type="application/rss+xml" title="Science Hack Day Nairobi » Feed" href="http://sf.sciencehackday.com/feed/">
-<link rel="alternate" type="application/rss+xml" title="Science Hack Day Nairobi » Comments Feed" href="http://sf.sciencehackday.com/comments/feed/">
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://sf.sciencehackday.com/wp-includes/wlwmanifest.xml"> 
-<link rel="index" title="Science Hack Day Nairobi" href="./Science Hack Day Nairobi   Get excited and make things …with science!_files/Science Hack Day Nairobi   Get excited and make things …with science!.htm">
+<link rel="alternate" type="application/rss+xml" title="Science Hack Day Nairobi » Feed" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="Science Hack Day Nairobi » Comments Feed" href="/comments/feed/">
+<link rel="index" title="Science Hack Day Nairobi" href="/post/2011/nov/18/about-science-hack-day/">
 <meta name="generator" content="django 2.7">
 <style type="text/css">
-body { background-image: url('/media/images/tarantula.jpg'); background-repeat: repeat; background-position: top center; background-attachment: scroll; }
+body { background-image: url('/static/images/tarantula.jpg'); background-repeat: repeat; background-position: top center; background-attachment: scroll; }
 </style>
-<!-- Google analytics tracking code --> 
 
+<!-- Google analytics tracking code --> 
 <script type="text/javascript">
 
- var _gaq = _gaq || [];
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27505690-1']);
+  _gaq.push(['_trackPageview']);
 
- _gaq.push(['_setAccount', 'UA-26731758-1']);
-
- _gaq.push(['_trackPageview']);
-
-(function() {
-
-   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-
-   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-
-   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-
-})();
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
 
 </script>
-
 <!-- End Google analytics tracking code --> 
+
 </head>
 
 <body class="home blog">
@@ -49,7 +42,7 @@ body { background-image: url('/media/images/tarantula.jpg'); background-repeat: 
 	<div id="header">
 		<div id="masthead">
 
-			<div id="branding" role="banner" style="background: url('/media/images/cropped-Screen-shot.jpg'); height:198px;">
+			<div id="branding" role="banner" style="background: url('/static/images/cropped-Screen-shot.jpg'); height:198px;">
 								<h1 id="site-title">
 					<span>
 						<a href="/" title="Science Hack Day Nairobi" rel="home">Science Hack Day Nairobi</a>
@@ -63,9 +56,9 @@ body { background-image: url('/media/images/tarantula.jpg'); background-repeat: 
 								<div class="menu-header"><ul id="menu-main-navigation" class="menu"><li id="menu-item-99" class="menu-item menu-item-type-custom current-menu-item current_page_item menu-item-home menu-item-99"><a href="/">Home</a></li>
 <li id="menu-item-104" class="menu-item menu-item-type-post_type menu-item-104"><a href="/post/2011/nov/18/about-science-hack-day/">About</a></li>
 <li id="menu-item-101" class="menu-item menu-item-type-post_type menu-item-101"><a href="/when-where/">When + Where</a></li>
-<li id="menu-item-186" class="menu-item menu-item-type-post_type menu-item-186"><a href="/prizes/">Prizes</a></li>
+<li id="menu-item-186" class="menu-item menu-item-type-post_type menu-item-186"><a href="/post/2011/dec/06/prizes/">Prizes</a></li>
 <li id="menu-item-172" class="menu-item menu-item-type-post_type menu-item-172"><a href="/register/">Register</a></li>
-<li id="menu-item-105" class="menu-item menu-item-type-custom menu-item-105"><a href="/wiki/">Wiki</a></li>
+<li id="menu-item-105" class="menu-item menu-item-type-custom menu-item-105"><a href="http://sciencehackday.pbworks.com/Nairobi/">Wiki</a></li>
 </ul></div>			</div><!-- #access -->
 		</div><!-- #masthead -->
 	</div><!-- #header -->
@@ -77,7 +70,7 @@ body { background-image: url('/media/images/tarantula.jpg'); background-repeat: 
 
 			
 	<div id="nav-above" class="navigation">
-		<div class="nav-previous"><a href="/?page=2/"><span class="meta-nav">←</span> Older posts</a></div>
+		<div class="nav-previous"><a href="/post/"><span class="meta-nav">←</span> Other posts</a></div>
 		<div class="nav-next"></div>
 	</div><!-- #nav-above -->
 
@@ -130,7 +123,7 @@ body { background-image: url('/media/images/tarantula.jpg'); background-repeat: 
 		{% endblock %}	
 		
 				<div id="nav-below" class="navigation">
-					<div class="nav-previous"><a href="/?page=2/"><span class="meta-nav">←</span> Older posts</a></div>
+					<div class="nav-previous"><a href="/post/"><span class="meta-nav">←</span> Other posts</a></div>
 					<div class="nav-next"></div>
 				</div><!-- #nav-below -->
 			</div><!-- #content -->
@@ -142,32 +135,32 @@ body { background-image: url('/media/images/tarantula.jpg'); background-repeat: 
 
 <li id="text-3" class="widget-container widget_text"><h3 class="widget-title">Contact us</h3>			<div class="textwidget"><p>Have questions or want to chat more about Science Hack Day Nairobi? Email <a href="mailto:ariel@sciencehackday.org">mmwanga@kennesaw.edu</a></p>
 <p><iframe src="/follow/" allowtransparency="true" frameborder="0" scrolling="no" class="twitter-follow-button" style="width: 300px; height: 20px; " title=""></iframe><br>
-<script src="/media/scripts/js/widgets.js" type="text/javascript"></script></p>
+<script src="/static/scripts/js/widgets.js" type="text/javascript"></script></p>
 </div>
 		</li><li id="text-5" class="widget-container widget_text"><h3 class="widget-title">Supported by</h3>			<div class="textwidget"><p><small>Nobelist</small><br>
 • <a href="http://sfbrightworks.org/">Brightworks</a><br>
 • <a href="http://www.dtra.mil/Missions/ChemicalBiologicalDefense/ChemicalBiologicalDefenseHome.aspx">Defense Threat Reduction Agency</a></p>
 <p><small>Fellow</small><br>
-• <a href="http://github.com/">GitHub</a><br>
-• <a href="http://strathmore.edu/"> Strathmore University</a><br>
-• <a href="http://ihub.co.ke/">iHub</a><br>
-• <a href="http://hp.com/"> HP</a><br>
-• <a href="http://mendeley.com/">Mendeley</a></p>
+• <a href="http://github.com">GitHub</a><br />
+• <a href="http://bayareascience.org">Bay Area Science Festival</a><br />
+• <a href="http://galleriapark.com">Galleria Park Hotel</a><br />
+• <a href="http://cartodb.com">CartoDB</a><br />
+• <a href="http://mendeley.com">Mendeley</a></p>
 <p><small>Scholar</small><br>
-• <a href="http://www.swissnexsanNairobi.org/">swissnex Nairobi</a><br>
-• <a href="http://www.plos.org/">Public Library of Science</a><br>
-• <a href="http://webfwd.org/">Mozilla WebFWD</a><br>
-• <a href="http://siliconvalleyspacecenter.org/">Silicon Valley Space Center</a></p>
+• <a href="http://www.swissnexsanfrancisco.org/">swissnex san francisco</a><br />
+• <a href="http://www.plos.org">Public Library of Science</a><br />
+• <a href="http://webfwd.org">Mozilla WebFWD</a><br />
+• <a href="http://siliconvalleyspacecenter.org">Silicon Valley Space Center</a></p>
 </div>
 		</li><li id="text-4" class="widget-container widget_text"><h3 class="widget-title">Organized by</h3>			
 		<div class="textwidget">
-		<a href="http://www.strathmore.edu/sevilla">Joseph Sevilla</a><br>
+		<a href="http://twitter.com/joesevilla/">Dr. Joseph Sevilla</a><br>
 		<a href="http://arielwaldman.com/">Ariel Waldman</a><br>
-		<a href="http://www.nerd.co.ke/">Morris Mwanga</a><br>
-		<a href="http://twitter.com/ckithika">Charles Kithika</a><br>
-		<a href="http://www.strathmore.edu/sylvia">Sharon Mutisya </a><br>
-		<a href="http://www.strathmore.edu/kweyu">Emmanuel Kweyu</a><br>
-<a href="http://twitter.com/chiteri">Martin Akolo</a><br>
+		<a href="http://www.nerd.co.ke/morris/">Morris Mwanga</a><br>
+		<a href="http://twitter.com/ckithika/">Charles Kithika</a><br>
+		<a href="http://www.strathmore.edu/sharon/">Sharon Mutisya </a><br>
+		<a href="http://www.strathmore.edu/kweyu/">Emmanuel Kweyu</a><br>
+<a href="http://twitter.com/chiteri/">Martin Akolo</a><br>
 </p>
 </div>
 		</li><li id="search-2" class="widget-container widget_search"><form role="search" method="get" id="searchform" action="/">
