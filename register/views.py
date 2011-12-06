@@ -29,7 +29,7 @@ def encodeUserData(url, app_key, user_key, event_id):
     return u"%s?app_key=%s&user_key=%s&id=%s" % (url, app_key, user_key, event_id)
 
 def access_event(request):	
-    link = encodeUserData(settings.URL, settings.APP_KEY, settings.USER_KEY, settings.EVENT_ID)
+    link = encodeUserData(settings.EB_URL, settings.EB_APP_KEY, settings.EB_USER_KEY, settings.EB_EVENT_ID)
     res = urllib2.urlopen(link)
     res = json.loads(res.read()) # Convert the JSON string to a Python data structure (dictionary) 
     return  render_to_response('register/attendees_list.html', {'participants':res['attendees']}) # Return a dictionary from the list given 
