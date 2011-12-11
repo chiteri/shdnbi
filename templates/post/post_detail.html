@@ -2,6 +2,8 @@
 
 {% block title %} {{ object.title }} {% endblock %} 
 
+{% block meta_content %} {{ object.title }} {% endblock %}
+
 {% block extra_headers %} 
 {% url admin:jsi18n as jsi18nurl %}
 <script type="text/javascript" src="{{ jsi18nurl|default:"../../../jsi18n/" }}"></script>

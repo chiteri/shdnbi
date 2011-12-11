@@ -2,7 +2,7 @@
 <!-- saved from url=(0029)http://sf.sciencehackday.com/ -->
 <html dir="ltr" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="UTF-8">
-<meta name="description" content="A Website for the Science Hack day event to be held in Nairobi at Stathmore University's iLab in April 13 - 15th, 2012." />
+<meta name="description" content="{% block meta_content %}A Website for the Science Hack day event to be held in Nairobi at Stathmore University's iLab in April 13 - 15th, 2012.{% endblock %}" />
 <meta name="keywords" content="Science Hack day - Nairobi, Science Hack Day, SHD, SHD Nairoi, SHD Nairobi 2012" />
 <meta name="author" content="Martin Akolo Chiteri - www.geek.co.ke" />
 <title> Science Hack Day Nairobi | {% block title %} Get excited and make things …with science! {% endblock %} </title>
@@ -102,14 +102,17 @@ body { background-image: url('/static/images/tarantula.jpg'); background-repeat:
 						 
 						 {% if item.tags %}
 						 <span class="meta-sep">|</span>
-
+						{% load tagging_tags %}
 						<span class="tag-links">
 						<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> 
-						 {% for tag in item.tags %}
-						<a href="{{ tag.get_absolute_url }}" rel="tag">{{ tag }}</a>
+						{% regroup item.tags|dictsort:"count" by count as sorted_tags %}
+						 {% for count in sorted_tags reversed %}
+							{% for tag in count.lst %}
+						<a href="{{ tag.get_absolute_url }}" rel="tag">{{ tag.title }}</a>
 							{% if forloop.last %}{% else %}
 							{% ifequal forloop.revcounter0 1 %}and {% else %}, {% endifequal %}
-							{% endif %}						 
+							{% endif %}	
+							{% endfor %}
 						{% endfor %}						 
 						</span> 
 						{% endif %}
