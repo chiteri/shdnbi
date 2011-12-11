@@ -32,5 +32,5 @@ def access_event(request):
     link = encodeUserData(settings.EB_URL, settings.EB_APP_KEY, settings.EB_USER_KEY, settings.EB_EVENT_ID)
     res = urllib2.urlopen(link)
     res = json.loads(res.read()) # Convert the JSON string to a Python data structure (dictionary) 
-    return  render_to_response('register/attendees_list.html', {'participants':res['attendees']}) # Return a dictionary from the list given 
+    return  render_to_response('register/attendees_list.html', {'participants':res['attendees'], 'no_of_attendees':len(res['attendees'])}) # Return a dictionary from the list given 
 
