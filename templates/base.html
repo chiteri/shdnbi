@@ -60,7 +60,7 @@ body { background-image: url('/static/images/tarantula.jpg'); background-repeat:
 <li id="menu-item-101" class="menu-item menu-item-type-post_type menu-item-101"><a href="/when-plus-where/">When + Where</a></li>
 <li id="menu-item-186" class="menu-item menu-item-type-post_type menu-item-186"><a href="/post/2011/dec/06/prizes/">Prizes</a></li>
 <li id="menu-item-172" class="menu-item menu-item-type-post_type menu-item-172"><a href="/register/">Register</a></li>
-<li id="menu-item-105" class="menu-item menu-item-type-custom menu-item-105"><a href="http://sciencehackday.pbworks.com/Nairobi/">Wiki</a></li>
+<li id="menu-item-105" class="menu-item menu-item-type-custom menu-item-105"><a href="http://shdnairobi.pbworks.com/">Wiki</a></li>
 </ul></div>			</div><!-- #access -->
 		</div><!-- #masthead -->
 	</div><!-- #header -->
@@ -107,7 +107,7 @@ body { background-image: url('/static/images/tarantula.jpg'); background-repeat:
 						<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> 
 						{% regroup item.tags|dictsort:"count" by count as sorted_tags %}
 						 {% for count in sorted_tags reversed %}
-							{% for tag in count.lst %}
+							{% for tag in count.list %}
 						<a href="{{ tag.get_absolute_url }}" rel="tag">{{ tag.title }}</a>
 							{% if forloop.last %}{% else %}
 							{% ifequal forloop.revcounter0 1 %}and {% else %}, {% endifequal %}
@@ -184,8 +184,8 @@ body { background-image: url('/static/images/tarantula.jpg'); background-repeat:
 
 
 			<div id="site-info">
-				<a href="/" title="Science Hack Day Nairobi" rel="home">
-					Science Hack Day Nairobi				</a> 
+				<a href="http://www.sciencehackday.org/" title="Science Hack Day SF" rel="Origin"> Science Hack Day </a> 
+				<a href="/" title="Science Hack Day Nairobi" rel="home"> Nairobi </a> 
 				</a> ( Source Code <a href="https://github.com/chiteri/shdnbi/"> at GitHub ) </a>
 
 			</div><!-- #site-info -->

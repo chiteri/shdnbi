@@ -8,7 +8,7 @@ To get these components as painlessly as possible, first:
 => Install the language itself from [ http://www.python.org/getit/ ]. Versions from 2.6 onwards but 
 not including 3.0 are recommended,
 
-=> Obtain Python's easy install package from [ http://pypi.python.org/pypi/setuptools#files ]. Then setup 
+=> Obtain Python's Setup tools package from [ http://pypi.python.org/pypi/setuptools#files ]. Then setup 
 the dependencies by running the commands from your computer terminal: 
 
 $ easy_install django 
