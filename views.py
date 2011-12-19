@@ -8,4 +8,4 @@ def home(request):
     return direct_to_template(request, 'base.html', {'featured_posts': Post.objects.filter(featured=True) } ) 
 	
 def follow(request): 
-    return direct_to_template(request, 'follow_button.html')
+    return direct_to_template(request, 'follow_button.htm')
