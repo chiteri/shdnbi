@@ -113,7 +113,7 @@ input,
 textarea,
 .page-title span,
 .pingback a.url {
-	font-family: Georgia, "Bitstream Charter", serif;
+	font-family: 'Segoe UI', 'Lucida Grande', Georgia, "Bitstream Charter", serif;
 }
 h3#comments-title,
 h3#reply-title,
@@ -141,7 +141,7 @@ h3#reply-title,
 .widget-title,
 .wp-caption-text,
 input[type=submit] {
-	font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+	font-family: 'Segoe UI', 'Lucida Grande', "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
 }
 pre {
 	font-family: "Courier 10 Pitch", Courier, monospace;
