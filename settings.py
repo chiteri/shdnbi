@@ -159,6 +159,6 @@ LOGGING = {
 # Extra data for the Event brite (prefix EB_) service 
 EB_APP_KEY = 'P477AH3GW4CUVAUS25'
 EB_USER_KEY = '131770253021104887286'
-EB_EVENT_ID = '2471841344'
+EB_EVENT_ID = '5393680644' #'2471841344'
 EB_URL = 'http://www.eventbrite.com/json/event_list_attendees'
 
